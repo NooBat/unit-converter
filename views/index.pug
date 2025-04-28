@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  main
+    form(action='/convert/result', method='post')
+      div
+        label(for='value') Enter the #{type} to convert: 
+        input(type='text', name='value', id='value')
+
+      div
+        label(for='from-unit') Unit to Convert from: 
+        select(name='fromUnit' id='from-unit')
+          each unit in units
+            option(value=unit.value)= unit.name
+
+      div
+        label(for='from-unit') Unit to Convert to: 
+        select(name='toUnit' id='to-unit')
+          each unit in units
+            option(value=unit.value)= unit.name
+
+      button(type='submit') Convert

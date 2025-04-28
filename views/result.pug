@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  main
+    h2 Result of your calculation
+
+    p #{value} #{fromUnit} = #{result} #{toUnit}
+
+    button(type='button' onclick=`navigateTo("${type}")`) Reset

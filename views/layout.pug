@@ -3,5 +3,13 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/navigate.js')
   body
+    h1(id='title') Unit Converter
+
+    nav
+      button(type='button' onclick="navigateTo('length')" class=`${type === 'length' ? 'is-active' : ''}`) Length
+      button(type='button' onclick="navigateTo('weight')" class=`${type === 'weight' ? 'is-active' : ''}`) Weight
+      button(type='button' onclick="navigateTo('temperature')" class=`${type === 'temperature' ? 'is-active' : ''}`) Temperature
+
     block content
