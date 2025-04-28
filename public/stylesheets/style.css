@@ -6,3 +6,36 @@ body {
 a {
   color: #00B7FF;
 }
+
+#title {
+  font-size: 32px;
+  font-weight: bold;
+
+  margin-bottom: 12px;
+}
+
+nav {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  button.is-active {
+    font-weight: bold;
+    color: #1d8ebb;
+    text-decoration: underline;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
